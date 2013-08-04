@@ -11,3 +11,17 @@ two:
   description: MyText
   public: false
   invite_status: MyString
+
+sanfrancisco:
+  name: San Francisco
+  description:
+    the world's hot-spot for internet start-ups and home of the 49ers
+  public: true
+  invite_status: open
+
+piso:
+  name: My flat in Madrid
+  description:
+    Calle Angel Mugica 9, 4B
+  public: false
+  invite_status: admin_invite

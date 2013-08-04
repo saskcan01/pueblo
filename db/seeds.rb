@@ -59,17 +59,17 @@ Community.delete_all
 Community.create!(name: 'Smallville',
   description: "Blanca's action figure collection",
   public: true,
-  invite_status: 'admin_invite_only')
+  invite_status: 'admin_invite')
 # . . .
 Community.create!(name: 'Villaseco de los Gamitos',
   description: 'Tasks and purchases for Pena la Casa',
   public: false,
-  invite_status: 'invite_only')
+  invite_status: 'invite')
 # . . . 
 Community.create!(name: 'Calle Angel Mugica 9, 4B',
   description: "Blanca and Jay's flat in Madrid",
   public: false,
-  invite_status: 'admin_invite_only')
+  invite_status: 'admin_invite')
 # . . .
 Community.create!(name: 'Have a Nice Day!',
   description: "Place your tasks in this Pueblo to motivate yourself and others!",
