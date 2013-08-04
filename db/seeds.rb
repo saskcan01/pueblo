@@ -54,3 +54,45 @@ Task.create!(title: 'Roast a Duck',
   status: 'incomplete',
   priority: 1,
   private: false)
+# . . .
+Community.delete_all
+Community.create!(name: 'Smallville',
+  description: "Blanca's action figure collection",
+  public: true,
+  invite_status: 'admin_invite_only')
+# . . .
+Community.create!(name: 'Villaseco de los Gamitos',
+  description: 'Tasks and purchases for Pena la Casa',
+  public: false,
+  invite_status: 'invite_only')
+# . . . 
+Community.create!(name: 'Calle Angel Mugica 9, 4B',
+  description: "Blanca and Jay's flat in Madrid",
+  public: false,
+  invite_status: 'admin_invite_only')
+# . . .
+Community.create!(name: 'Have a Nice Day!',
+  description: "Place your tasks in this Pueblo to motivate yourself and others!",
+  public: true,
+  invite_status: 'open')
+# . . .
+User.delete_all
+User.create!(name: 'James Neilson',
+  password: 'abc123',
+  image_url: 'img_1.jpg')
+# . . .
+User.create!(name: 'Blanca Paz Garcia',
+  password: '123456',
+  image_url: 'img_2.jpg')
+# . . .
+User.create!(name: 'Farmer Joe',
+  password: 'redcow123',
+  image_url: 'img_3.jpg')
+# . . .
+User.create!(name: 'Santa Claus',
+  password: 'hohoho123',
+  image_url: 'img_4.jpg')
+# . . .
+User.create!(name: 'Easter Rabbit',
+  password: 'hophop123',
+  image_url: 'img_5.jpg')
