@@ -1,0 +1,11 @@
+require 'test_helper'
+
+class AccountControllerTest < ActionController::TestCase
+  test "should get index" do
+    alice = users(:one)
+    post :create, name: alice.name, 
+    get :index
+    assert_response :success
+  end
+
+end

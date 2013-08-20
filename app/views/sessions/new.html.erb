@@ -1,0 +1,38 @@
+<div class="depot_form">
+  <% if flash[:alert] %>
+    <p id="notice"><%= flash[:alert] %></p>
+  <% end %>
+  <p><strong>Welcome to Pueblo!</strong><br/>
+    Pueblo is currently in <i>pre-alpha</i></p>
+  <p><strong>What does this mean?</strong>
+  <ul>
+    <li>You can sign-up and log-in but your account might be deleted shortly.<br/>Don't worry, we will let you know when your login information becomes safe</li>
+    <li>Your sign-up information is safe from the public</li>
+    <li>Any data you create after logging-in can be viewed and changed by any registered users</li>
+    <li>We will be adding many new features and making drastic changes to the design and layout in the near future</li>
+    <li>By using <strong>Pueblo</strong> while in pre-alpha, you are one of the very first users!<br/>We thank you for your curiosity and look forward to pleasing you with a full release soon!</li>
+  </ul></p>
+  <%= form_tag do %>
+    <fieldset>
+      <legend>Please Log In</legend>
+
+      <div>
+        <%= label_tag :name, 'Name:' %>
+        <%= text_field_tag :name, params[:name] %>
+      </div>
+
+      <div>
+        <%= label_tag :password, 'Password:' %>
+        <%= password_field_tag :password, params[:password] %>
+      </div>
+
+      <div>
+        <%= submit_tag "Login" %>
+      </div>
+    </fieldset>
+  <% end %>
+  <div>
+    <p>Not a user? Sign-up for free!</p>
+    <%= button_to("Sign-up", new_user_path, :method => "get") %>
+  </div>
+</div>

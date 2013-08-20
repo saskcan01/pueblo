@@ -6,7 +6,8 @@ class UsersControllerTest < ActionController::TestCase
     @update = {
       name: 'Test User',
       password: '123secret',
-      image_url: 'test_user.png'
+      image_url: 'test_user.png',
+      password_confirmation: '123secret'
     }
   end
 
@@ -25,8 +26,7 @@ class UsersControllerTest < ActionController::TestCase
     assert_difference('User.count') do
       post :create, user: @update
     end
-
-    assert_redirected_to user_path(assigns(:user))
+    assert_redirected_to users_path
   end
 
   test "should show user" do
@@ -41,7 +41,7 @@ class UsersControllerTest < ActionController::TestCase
 
   test "should update user" do
     patch :update, id: @user, user: @update
-    assert_redirected_to user_path(assigns(:user))
+    assert_redirected_to users_path
   end
 
   test "should destroy user" do

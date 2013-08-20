@@ -1,0 +1,13 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<h1>Listing all communities</h1>
+
+<% @communities.each do |community| %>
+  <div class="entry">
+    <h3> <%= community.name %></h3>
+    <%= community.description %>
+  </div>
+<% end %>
+

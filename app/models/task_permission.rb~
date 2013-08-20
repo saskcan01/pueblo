@@ -1,0 +1,2 @@
+class TaskPermission < ActiveRecord::Base
+end

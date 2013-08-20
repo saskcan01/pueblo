@@ -1,0 +1,4 @@
+class RemoveAuthorOwnerFromTasks < ActiveRecord::Migration
+  def change
+  end
+end

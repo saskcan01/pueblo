@@ -79,20 +79,25 @@ Community.create!(name: 'Have a Nice Day!',
 User.delete_all
 User.create!(name: 'James Neilson',
   password: 'abc123',
+  password_confirmation: 'abc123',
   image_url: 'img_1.jpg')
 # . . .
 User.create!(name: 'Blanca Paz Garcia',
   password: '123456',
+  password_confirmation: '123456',
   image_url: 'img_2.jpg')
 # . . .
 User.create!(name: 'Farmer Joe',
   password: 'redcow123',
+  password_confirmation: 'redcow123',
   image_url: 'img_3.jpg')
 # . . .
 User.create!(name: 'Santa Claus',
   password: 'hohoho123',
+  password_confirmation: 'hohoho123',
   image_url: 'img_4.jpg')
 # . . .
 User.create!(name: 'Easter Rabbit',
   password: 'hophop123',
+  password_confirmation: 'hophop123',
   image_url: 'img_5.jpg')

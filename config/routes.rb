@@ -1,10 +1,25 @@
 Pueblo::Application.routes.draw do
+  get 'admin' => 'admin#index'
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
+  get "sessions/create"
+  get "sessions/destroy"
+
   resources :users
 
+  controller :users do
+    get 'signup' => :new
+  end
+ 
   resources :communities
 
   resources :tasks
 
+  root 'account#index', as: 'account'
+  post 'sessions/new' => 'communities#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

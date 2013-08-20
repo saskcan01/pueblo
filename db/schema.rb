@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130804105638) do
+ActiveRecord::Schema.define(version: 20130814113228) do
 
   create_table "communities", force: true do |t|
     t.string   "name"
@@ -24,8 +24,6 @@ ActiveRecord::Schema.define(version: 20130804105638) do
 
   create_table "tasks", force: true do |t|
     t.string   "title"
-    t.string   "author"
-    t.string   "owner"
     t.text     "description"
     t.string   "status"
     t.integer  "priority"
@@ -36,7 +34,7 @@ ActiveRecord::Schema.define(version: 20130804105638) do
 
   create_table "users", force: true do |t|
     t.string   "name"
-    t.string   "password"
+    t.string   "password_digest"
     t.string   "image_url"
     t.datetime "created_at"
     t.datetime "updated_at"
